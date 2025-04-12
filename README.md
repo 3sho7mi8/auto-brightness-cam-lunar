@@ -1,4 +1,4 @@
-# Lunar Brightness Adjuster
+# auto-brightness-cam-lunar
 
 自動的にWebカメラから周囲の明るさを検出し、[Lunar CLI](https://lunar.fyi/#cli)を使用して外部ディスプレイの輝度を調整するPythonアプリケーションです。
 
