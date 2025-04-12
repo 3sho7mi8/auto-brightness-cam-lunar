@@ -55,10 +55,17 @@ A Python script that automatically adjusts external display brightness using the
 
 ## Usage
 
-Run the script using the following command:
+1.  **Make the run script executable (only needed once):**
+    ```bash
+    chmod +x run.sh
+    ```
 
-```bash
-venv/bin/python adjust_brightness.py
+2.  **Run the script:**
+    ```bash
+    ./run.sh
+    ```
+
+    This script will automatically use the Python interpreter from the `venv` virtual environment to execute `adjust_brightness.py`.
 ```
 
 The script will activate the webcam, measure the brightness, and adjust the display brightness accordingly using the Lunar CLI.
