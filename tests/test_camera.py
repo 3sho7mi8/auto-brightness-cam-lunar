@@ -168,15 +168,15 @@ class TestAmbientLightSensor(unittest.TestCase):
                 sensor.open()
                 brightness = sensor.measure_ambient_light(duration=0.5, sample_interval=0.1)
                 
-                # 検証（(100 + 150 + 200) / 3 = 150）
-                self.assertEqual(brightness, 150.0)
-                
-                # 3つのフレームがキャプチャされるはず
-                self.assertEqual(mock_camera.read.call_count, 3)
-                self.assertEqual(mock_get_brightness.call_count, 3)
-                
-                # sample_intervalごとにsleepするはず
-                mock_sleep.assert_has_calls([call(0.1), call(0.1), call(0.1)])
+                # 検証（0.5秒の間に取得されるのは 100 と 150 のみ。(100 + 150) / 2 = 125）
+                self.assertEqual(brightness, 125.0)
+
+                # 0.5秒の間に2つのフレームがキャプチャされるはず
+                self.assertEqual(mock_camera.read.call_count, 2)
+                self.assertEqual(mock_get_brightness.call_count, 2)
+
+                # sample_intervalごとにsleepするはず (2回)
+                mock_sleep.assert_has_calls([call(0.1), call(0.1)])
 
 
 @patch('src.camera.AmbientLightSensor')
