@@ -1,0 +1,3 @@
+"""
+Lunar Brightness Adjuster のテストパッケージ
+"""

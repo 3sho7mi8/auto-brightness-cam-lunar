@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""
+Lunar Brightness Adjuster
+
+Webカメラで周囲の輝度を測定し、Lunar CLIを使用してディスプレイの輝度を自動調整する
+スクリプト。
+"""
+import sys
+import argparse
+from src.brightness_adjuster import main
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Webカメラで周囲の輝度を測定し、Lunar CLIを使用してディスプレイの輝度を自動調整します。"
+    )
+    parser.add_argument(
+        "-d", "--debug",
+        action="store_true",
+        help="デバッグモードを有効にする（詳細なログ出力）"
+    )
+    parser.add_argument(
+        "-c", "--config",
+        help="使用する設定ファイルのパス（デフォルト: config.json）"
+    )
+    args = parser.parse_args()
+    
+    # デバッグモードが有効な場合はログレベルを設定
+    if args.debug:
+        import logging
+        from src.logger import setup_logger
+        setup_logger(level="DEBUG")
+    
+    # アプリケーションのメイン処理を実行
+    sys.exit(main())

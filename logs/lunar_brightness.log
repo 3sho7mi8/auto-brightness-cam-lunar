@@ -1,0 +1,9 @@
+2025-04-12 22:05:06 - lunar_brightness - INFO - Lunar Brightness Adjuster を開始します...
+2025-04-12 22:05:06 - lunar_brightness - INFO - 設定ファイル '/Users/yoshino/Desktop/lunar-support/config.json' を読み込みました。
+2025-04-12 22:05:06 - lunar_brightness - INFO - 使用する設定: 最小輝度=35, 最大輝度=80, キャプチャ時間=1.0秒
+2025-04-12 22:05:11 - lunar_brightness - INFO - 測定結果: 平均輝度 = 12.94 (サンプル数: 8)
+2025-04-12 22:05:12 - lunar_brightness - INFO - 環境光の輝度: 12.94 -> ディスプレイ輝度: 37.28%
+2025-04-12 22:05:12 - lunar_brightness - INFO - ディスプレイの輝度を 37% に設定します...
+2025-04-12 22:05:12 - lunar_brightness - INFO - ディスプレイの輝度を 37% に正常に設定しました。
+2025-04-12 22:05:12 - lunar_brightness - INFO - 輝度調整が正常に完了しました。
+2025-04-12 22:05:12 - lunar_brightness - INFO - Lunar Brightness Adjuster を終了します。
